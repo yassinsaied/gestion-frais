@@ -85,7 +85,20 @@ use App\State\Processor\Frais\FraisProcessor;
         ),
         // Collection operation personnalisée pour mes-frais
         new GetCollection(
-            uriTemplate: '/mes-frais'
+            uriTemplate: '/mes-frais',
+            provider: MesFraisProvider::class,
+            description: 'Récupère les frais de l\'utilisateur connecté',
+            openapiContext: [
+                'summary' => 'Liste mes notes de frais',
+                'responses' => [
+                    '200' => [
+                        'description' => 'Liste des frais récupérée avec succès'
+                    ],
+                    '401' => [
+                        'description' => 'Non autorisé'
+                    ]
+                ]
+            ]
         )
     ],
 
