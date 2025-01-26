@@ -1,0 +1,262 @@
+{
+	"info": {
+		"name": "API Frais",
+		"description": "Collection des endpoints pour la gestion des notes de frais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"url": "{{base_url}}/login_check",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": {
+						"email": "votre@email.com",
+						"password": "votreMotDePasse"
+					}
+				},
+				"description": "Authentification pour obtenir le token JWT"
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"originalRequest": {
+						"body": {
+							"mode": "raw",
+							"raw": {
+								"email": "votre@email.com",
+								"password": "votreMotDePasse"
+							}
+						}
+					},
+					"status": "200",
+					"body": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9..."
+					}
+				}
+			]
+		},
+		{
+			"name": "Créer une note de frais",
+			"request": {
+				"method": "POST",
+				"url": "{{base_url}}/frais",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": {
+						"date": "2024-03-20",
+						"montant": 125.5,
+						"type": "repas",
+						"description": "Déjeuner professionnel",
+						"societe": 1
+					}
+				},
+				"description": "Création d'une nouvelle note de frais"
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"status": "201",
+					"body": {
+						"id": 1,
+						"date": "2024-03-20",
+						"montant": 125.5,
+						"type": "repas",
+						"description": "Déjeuner professionnel",
+						"societe": {
+							"id": 1,
+							"nom": "Ma Société"
+						},
+						"justificatif": null,
+						"createdAt": "2024-03-20T10:00:00+00:00",
+						"updatedAt": null,
+						"statut": "en_attente"
+					}
+				}
+			]
+		},
+		{
+			"name": "Récupérer une note de frais",
+			"request": {
+				"method": "GET",
+				"url": "{{base_url}}/frais/:id",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"description": "Récupération d'une note de frais spécifique"
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"status": "200",
+					"body": {
+						"id": 1,
+						"date": "2024-03-20",
+						"montant": 125.5,
+						"type": "repas",
+						"description": "Déjeuner professionnel",
+						"societe": {
+							"id": 1,
+							"nom": "Ma Société"
+						},
+						"justificatif": null,
+						"createdAt": "2024-03-20T10:00:00+00:00",
+						"updatedAt": null,
+						"statut": "en_attente"
+					}
+				}
+			]
+		},
+		{
+			"name": "Modifier une note de frais",
+			"request": {
+				"method": "PUT",
+				"url": "{{base_url}}/frais/:id",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": {
+						"montant": 150.0,
+						"description": "Mise à jour de la description"
+					}
+				},
+				"description": "Modification d'une note de frais existante"
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"status": "200",
+					"body": {
+						"id": 1,
+						"date": "2024-03-20",
+						"montant": 150.0,
+						"type": "repas",
+						"description": "Mise à jour de la description",
+						"societe": {
+							"id": 1,
+							"nom": "Ma Société"
+						},
+						"justificatif": null,
+						"createdAt": "2024-03-20T10:00:00+00:00",
+						"updatedAt": "2024-03-20T11:00:00+00:00",
+						"statut": "en_attente"
+					}
+				}
+			]
+		},
+		{
+			"name": "Supprimer une note de frais",
+			"request": {
+				"method": "DELETE",
+				"url": "{{base_url}}/frais/:id",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"description": "Suppression d'une note de frais"
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"status": "204",
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Liste de mes frais",
+			"request": {
+				"method": "GET",
+				"url": "{{base_url}}/mes-frais",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					}
+				],
+				"description": "Récupération de la liste de vos notes de frais",
+				"query": [
+					{
+						"key": "page",
+						"value": "1",
+						"description": "Numéro de page"
+					},
+					{
+						"key": "type",
+						"value": "repas",
+						"description": "Filtrer par type (transport, repas, hebergement, autres)"
+					}
+				]
+			},
+			"response": [
+				{
+					"name": "Succès",
+					"status": "200",
+					"body": {
+						"hydra:member": [
+							{
+								"id": 1,
+								"date": "2024-03-20",
+								"montant": 125.5,
+								"type": "repas",
+								"description": "Déjeuner professionnel",
+								"societe": {
+									"id": 1,
+									"nom": "Ma Société"
+								},
+								"justificatif": null,
+								"createdAt": "2024-03-20T10:00:00+00:00",
+								"updatedAt": null,
+								"statut": "en_attente"
+							}
+						],
+						"hydra:totalItems": 1,
+						"hydra:view": {
+							"hydra:first": "/api/mes-frais?page=1",
+							"hydra:last": "/api/mes-frais?page=1",
+							"hydra:current": "/api/mes-frais?page=1"
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://votre-api.com/api"
+		}
+	]
+}
