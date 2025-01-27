@@ -19,20 +19,6 @@ class MesFraisProvider implements ProviderInterface
     {
         // Récupère l'utilisateur connecté
         $user = $this->security->getUser();
-
-        // Initialise les variables
-        $userId = null;
-        $userEmail = 'non connecté';
-
-        // Si un utilisateur est connecté
-        if ($user !== null) {
-            // Exemple : user.id = 1
-            $userId = $user->getId();
-            // Exemple : user.email = "john@example.com"
-            $userEmail = $user->getEmail();
-        }
-
-
         // Retourne les frais de l'utilisateur
         return $this->fraisRepository->findBy(['user' => $user]);
     }
