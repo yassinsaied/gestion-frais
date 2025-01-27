@@ -75,8 +75,12 @@ Cette application permet de gérer les notes de frais professionnels. Elle est c
    DATABASE_URL="mysql://root:@127.0.0.1:3306/expense_management"
    SYMFONY_DEPRECATIONS_HELPER=disabled=1
    ```
+7. Chargez les données de la base de données :
+   ```bash
+   php bin/console doctrine:fixtures:load 
+   ```
 
-7. Chargez les données de test :
+8. Chargez les données de test :
    ```bash
    php bin/console doctrine:fixtures:load --env=test --no-interaction
    ```
