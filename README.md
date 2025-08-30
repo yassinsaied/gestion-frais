@@ -16,10 +16,10 @@ Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds 
 
 ## Prérequis
 
-- PHP >= 8.1
+- PHP >= 8.1.5
 - Symfony CLIQSDFQSDF
 - Composer
-- Une base de données compatible MySQL
+- Une base de données compatible MySQL/POST
 
 ## Technologies utilisées
 
@@ -60,10 +60,12 @@ Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds 
 
 4. Générez les clés JWT :
 
-   ```bash
+   ````bash
    php bin/console lexik:jwt:generate-keypair
    ```Q
-QSDQSDQSD
+   QSDQSDQSD
+   ````
+
 5. Configurez la base de données et appliquez les migrations :
 
    ```bash
