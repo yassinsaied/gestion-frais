@@ -16,10 +16,10 @@ Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds 
 
 ## Prérequis
 
-- PHP >= 8.1
+- PHP >= 8.1.5
 - Symfony CLI
 - Composer
-- Une base de données compatible MySQL
+- Une base de données compatible MySQL/POST
 
 ## Technologies utilisées
 
@@ -136,17 +136,11 @@ Une collection Postman complète est disponible à la racine du projet (`frais_c
 2. Cliquez sur "Import"
 3. Glissez-déposez le fichier `frais_collection.json` ou sélectionnez-le depuis votre ordinateur
 4. La collection sera importée avec tous les endpoints configurés :
-   - Authentication (Login)
-   - Création, consultation, modification et suppression des notes de frais
-   - Liste des frais personnalisée pour l'utilisateur connecté
+   - Authentication (Login) .
+   - Création, consultation, modification et suppression des notes de frais .
+   - Liste des frais personnalisée pour l'utilisateur connecté .
 
 Variables d'environnement à configurer dans Postman :
 
 - `base_url` : URL de base de votre API (par défaut : http://votre-api.com/api)
 - `token` : JWT token (sera automatiquement rempli après l'authentification)
-
-Houma skhouna lkolha dopy
-T7eb tchouf l5arja
-Nbet n7asel fi afkari mardhi nchi5 bl barcha
-Nes t7eb lfou9 w nes lteli t7bk tarja3
-Bled ma t7eb trou9 w chorta win sokna lmarja3
