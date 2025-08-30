@@ -4,7 +4,7 @@
 
 Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds sds frais professionnels. Elle est construite avec Symfony 6.4 et API Platform 3.4, en utilisant LexikJWT pour l'authentification. Des fixtures ont été utilisées pour générer des données initiales dans la base de données test de commit .
 
-## Fonctionnalités principales
+## Fonctionnalités principalesQSDFQSDF
 
 ### Notes de Frais
 
@@ -17,7 +17,7 @@ Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds 
 ## Prérequis
 
 - PHP >= 8.1
-- Symfony CLI
+- Symfony CLIQSDFQSDF
 - Composer
 - Une base de données compatible MySQL
 
@@ -62,8 +62,8 @@ Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds 
 
    ```bash
    php bin/console lexik:jwt:generate-keypair
-   ```
-
+   ```Q
+QSDQSDQSD
 5. Configurez la base de données et appliquez les migrations :
 
    ```bash
@@ -97,7 +97,7 @@ Démarrez le serveur Symfony :
 symfony server:start
 ```
 
-Accédez à l'application à l'adresse [http://localhost:8000](http://localhost:8000).
+Accédez à l'application à l'adresse [http://localhost:8000](http://localhosQSDFQSDFt:8000).
 
 ## Authentification
 
@@ -122,7 +122,7 @@ php bin/phpunit tests/Api/FraisApiTest.php
 
 ### Notes de Frais
 
-- `POST /api/frais` : Création d'une note de frais
+- `POST /api/frais` : Création d'une note de fraisQSDFQSDF
 - `GET /api/frais/{id}` : Consultation d'une note de frais spécifique
 - `PUT /api/frais/{id}` : Modification d'une note de frais
 - `DELETE /api/frais/{id}` : Suppression d'une note de frais
@@ -138,7 +138,7 @@ Une collection Postman complète est disponible à la racine du projet (`frais_c
 4. La collection sera importée avec tous les endpoints configurés :
    - Authentication (Login)
    - Création, consultation, modification et suppression des notes de frais
-   - Liste des frais personnalisée pour l'utilisateur connecté
+   - Liste des frais personnalisée pour l'utilisateur connectéQSDF
 
 Variables d'environnement à configurer dans Postman :
 
@@ -150,3 +150,4 @@ T7eb tchouf l5arja
 Nbet n7asel fi afkari mardhi nchi5 bl barcha
 Nes t7eb lfou9 w nes lteli t7bk tarja3
 Bled ma t7eb trou9 w chorta win sokna lmarja3
+QSDFQSD
