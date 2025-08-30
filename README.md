@@ -110,7 +110,7 @@ L'authentification est gérée avec LexikJWT. Pour obtenir un jeton JWT, envoyez
 
 ## Tests
 
-Exécutez les tests avec PHPUnit :
+Exécutez les tests avec PHPUnit et test integration done :
 
 ```bash
 php bin/phpunit tests/Api/FraisApiTest.php
