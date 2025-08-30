@@ -2,7 +2,7 @@
 
 ## Description
 
-Cette application permet de gérer les notes de frais professionnels. Elle est construite avec Symfony 6.4 et API Platform 3.4, en utilisant LexikJWT pour l'authentification. Des fixtures ont été utilisées pour générer des données initiales dans la base de données.
+Cette application permet de gérer les notes de frais professionnels. Elle est construite avec Symfony 6.4 et API Platform 3.4, en utilisant LexikJWT pour l'authentification. Des fixtures ont été utilisées pour générer des données initiales dans la base de données test de commit .
 
 ## Fonctionnalités principales
 
