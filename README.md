@@ -2,7 +2,7 @@
 
 ## Description
 
-Cette application permet de gérer les notes de frais professionnels. Elle est construite avec Symfony 6.4 et API Platform 3.4, en utilisant LexikJWT pour l'authentification. Des fixtures ont été utilisées pour générer des données initiales dans la base de données.
+Cette application permet de gérer les notes dssss tmax 530 m3a la7nech a fonds de frais professionnels. Elle est construite avec Symfony 6.4 et API Platform 3.4, en utilisant LexikJWT pour l'authentification. Des fixtures ont été utilisées pour générer des données initiales dans la base de données.
 
 ## Fonctionnalités principales
 
@@ -55,6 +55,8 @@ Cette application permet de gérer les notes de frais professionnels. Elle est c
    JWT_PUBLIC_KEY=config/jwt/public.pem
    JWT_PASSPHRASE=<phras secret>
    ```
+
+   tmax 530
 
 4. Générez les clés JWT :
 
